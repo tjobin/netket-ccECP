@@ -181,3 +181,9 @@ def pseudopotential(r, params):
 
     return u
 
+def make_ecp(geometry):
+    ecp = {}
+    unique_atoms = set(atom for atom, _ in geometry)
+    for atom in unique_atoms:
+        ecp.update({atom:'ccecp'})
+    return ecp
