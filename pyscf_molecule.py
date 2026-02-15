@@ -11,6 +11,7 @@ class Molecule:
     def __init__(
             self,
             geometry,
+            ecp=None,
             run_fci=True,
             verbose=True,
             charge=0,
@@ -18,7 +19,7 @@ class Molecule:
             basis='sto-3g',
             unit="Bohr"
     ):
-        self.mol = gto.M(atom=geometry, basis=basis, unit=unit, charge=charge, spin=spin)
+        self.mol = gto.M(atom=geometry, basis=basis, unit=unit, charge=charge, spin=spin, ecp=ecp)
         self.mol.cart = True
         self.unit = unit
         assert unit.lower() == "bohr", "that's the correct one!"
