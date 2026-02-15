@@ -1,0 +1,6 @@
+# 
+pyscf
+matplotlib
+netket @ git+https://github.com/netket/netket.git@v3.15.2
+jax[cpu]==0.4.28
+equinox==0.11.10
