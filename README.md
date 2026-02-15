@@ -26,8 +26,8 @@ Prerequisites:
 
 ```
 # Clone the repository
-git clone https://github.com/tjobin/netket-kan.git
-cd netket-kan
+git clone https://github.com/tjobin/netket-ccECP.git
+cd netket-ccECP
 
 # Install dependencies - made for CPU use !
 pip install -r requirements.txt
