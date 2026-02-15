@@ -2,7 +2,6 @@ import os
 import json
 import matplotlib.pyplot as plt
 import numpy as np
-import re
 
 molecule = 'LiH'
 lr=0.001
@@ -45,14 +44,14 @@ for datafilename in datafilenames:
 
 plt.axhline(exact_energy + chemical_accuracy, color='k', linestyle='--', zorder=10, label='Chemical accuracy threshold')
 plt.axhline(mean_energy, color='r', zorder=10, label='Mean')
-plt.axhline(exact_energy, color='k', zorder=10, label='HF (aug-cc-pVQZ)')
+plt.axhline(exact_energy, color='k', zorder=10, label='Ferminet-ECP')
 
 plt.ylim(1.001 * exact_energy, 0.995 * exact_energy)
 
 plt.xlabel('Iterations')
 plt.ylabel('$E$ [Ha] ')
 plt.legend()
-outfilename = f'LiH_optimization_curve.pdf'
+outfilename = f'LiH_ecp_optimization_curve.pdf'
 output_dir = f'plots/' + outfilename 
 plt.savefig(output_dir, dpi=400, bbox_inches='tight')
 plt.show()
