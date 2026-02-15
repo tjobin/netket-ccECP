@@ -7,7 +7,7 @@
 
 netket-ccECP is the result of a second semester project (click [here](https://github.com/tjobin/netket-kan) to see the first) in Giuseppe Carleo's Computational Quantum Physics Lab under the supervision of David Linteau. It aimed at integrating a specific type of pseudopotentials, namely ccECP,  into the [NetKet](https://github.com/netket/netket) framework, enabling the use of Variational Monte Carlo simulations for larger systems such as transition metals or, possibly, crystal lattices.
 
-Many thanks must go to ByteDance, the authors of the library [FermiNet_with_ECP](https://github.com/bytedance/FermiNet_with_ECP), for their willingness to leave their work OpenSource, which has been of great help. Of course, FermiNet's amazing job, which remains available as well, has allowed this project to be fruitful.
+Many thanks must go to ByteDance, the authors of the library [FermiNet_with_ECP](https://github.com/bytedance/FermiNet_with_ECP), for their willingness to leave their work OpenSource, which has been of great help to understand how to implement ccECP in NetKet. This project reused their library as was, to the exception of correcting deprecations. Of course, FermiNet's amazing job, which remains fully available as well, has allowed this project to be fruitful, and for this I am grateful.
 
 #### Disclaimers:
   - David Linteau (@dalin27) wrote the majority of the code and had the kindness to share it with me
@@ -22,7 +22,6 @@ Prerequisites:
 * [NetKet](https://www.netket.org/) - Machine learning framework for quantum many-body problems.
 * [JAX](https://github.com/google/jax) - Autograd and XLA for high-performance ML research.
 * [Flax](https://github.com/google/flax) - A neural network library for JAX.
-* [FermiNet_with_ECP](https://github.com/bytedance/FermiNet_with_ECP) - An implementation combining FermiNet with effective core potential (ecp)
 
 
 ```
