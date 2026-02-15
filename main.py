@@ -6,7 +6,6 @@ import netket_extensions as nkext
 from optax._src import linear_algebra
 from _potential import PotentialEnergy
 from potential_ecp import get_potential_energy_ecp
-from potential import get_potential_energy
 from utils import make_ecp, geometries
 from minimalist_trial_wavefunction import Minimalist
 import flax
@@ -15,26 +14,14 @@ import flax
 load_params = False
 
 ## Mol object
-molecule = 'Ga'
-geometry = geometries(molecule)
-basis_set =  'sto-3g' #'ccecpccpvdz'
+molecule = 'LiH'
+geometry = geometries[molecule]
+basis_set =  'sto-3g'
 charge = 0
 spin = 0
 ecp = make_ecp(geometry)
 
 mol = Molecule(geometry, ecp=ecp, run_fci=False, basis=basis_set, unit='Bohr', charge=charge, spin=spin)
-
-## Ansatz parameters
-global_feature = False
-N_orbitals=8
-intermediate_dim=8
-mlp_output_dim=intermediate_dim
-mlp_layers=2
-normalization=True
-attention_dim=intermediate_dim
-n_features=8
-n_interactions=1
-n_heads=2
 
 ## Sampler parameters
 n_chains_per_rank = 8
